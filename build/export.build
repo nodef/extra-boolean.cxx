@@ -1,0 +1,6 @@
+$out_root/
+{
+  include extra-boolean/
+}
+
+export $out_root/extra-boolean/$import.target

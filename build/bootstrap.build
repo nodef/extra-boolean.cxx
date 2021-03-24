@@ -1,0 +1,7 @@
+project = extra-boolean
+
+using version
+using config
+using test
+using install
+using dist

@@ -1,0 +1,34 @@
+#pragma once
+
+// The numeric version format is AAAAABBBBBCCCCCDDDE where:
+//
+// AAAAA - major version number
+// BBBBB - minor version number
+// CCCCC - bugfix version number
+// DDD   - alpha / beta (DDD + 500) version number
+// E     - final (0) / snapshot (1)
+//
+// When DDDE is not 0, 1 is subtracted from AAAAABBBBBCCCCC. For example:
+//
+// Version      AAAAABBBBBCCCCCDDDE
+//
+// 0.1.0        0000000001000000000
+// 0.1.2        0000000001000020000
+// 1.2.3        0000100002000030000
+// 2.2.0-a.1    0000200001999990010
+// 3.0.0-b.2    0000299999999995020
+// 2.2.0-a.1.z  0000200001999990011
+//
+#define EXTRA_BOOLEAN_VERSION       $extra_boolean.version.project_number$ULL
+#define EXTRA_BOOLEAN_VERSION_STR   "$extra_boolean.version.project$"
+#define EXTRA_BOOLEAN_VERSION_ID    "$extra_boolean.version.project_id$"
+#define EXTRA_BOOLEAN_VERSION_FULL  "$extra_boolean.version$"
+
+#define EXTRA_BOOLEAN_VERSION_MAJOR $extra_boolean.version.major$
+#define EXTRA_BOOLEAN_VERSION_MINOR $extra_boolean.version.minor$
+#define EXTRA_BOOLEAN_VERSION_PATCH $extra_boolean.version.patch$
+
+#define EXTRA_BOOLEAN_PRE_RELEASE   $extra_boolean.version.pre_release$
+
+#define EXTRA_BOOLEAN_SNAPSHOT_SN   $extra_boolean.version.snapshot_sn$ULL
+#define EXTRA_BOOLEAN_SNAPSHOT_ID   "$extra_boolean.version.snapshot_id$"
